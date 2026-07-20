@@ -4,15 +4,17 @@ import Footer from '../components/Footer'
 
 function PublicLayout() {
   return (
-    <div className="public-layout">
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar />
 
-      {/* Outlet = "render whichever child route matched here" */}
-      <main style={{ minHeight: '80vh', padding: '1rem' }}>
+      <main style={{ padding: '2rem', flex: 1 }}>
+        
         <Outlet />
+
       </main>
 
       <Footer />
+
     </div>
   )
 }

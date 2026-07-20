@@ -3,10 +3,9 @@ import Sidebar from '../components/Sidebar'
 
 function AdminLayout() {
   return (
-    <div className="admin-layout" style={{ display: 'flex' }}>
+    <div style={{ display: 'flex' }}>
       <Sidebar />
-
-      <main style={{ flex: 1, padding: '1rem' }}>
+      <main style={{ flex: 1, padding: '30px', background: '#f7fafc', minHeight: '100vh' }}>
         <Outlet />
       </main>
     </div>

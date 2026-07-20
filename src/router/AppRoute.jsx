@@ -1,7 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
 
-
-
 import Login from '../pages/public/Login'
 import PublicLayout from '../layouts/PublicLayout'
 import AdminLayout from '../layouts/AdminLayout'
