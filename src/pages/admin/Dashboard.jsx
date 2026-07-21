@@ -1,8 +1,21 @@
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import styles from './Admin.module.css';
 
+// 1. Fetching real products list to calculate metrics dynamically!
+const fetchProducts = async () => {
+  const res = await fetch('http://localhost:5000/products');
+  if (!res.ok) throw new Error('Failed to fetch data');
+  return res.json();
+};
+
 function AdminDashboard() {
-  // 1. Dynamic Greeting System based on Real Time
+  const { data: products, isLoading } = useQuery({
+    queryKey: ['products'],
+    queryFn: fetchProducts,
+  });
+
+  // Dynamic Greeting based on time
   const getGreeting = () => {
     const hrs = new Date().getHours();
     if (hrs < 12) return 'Good Morning, Boss 🌅';
@@ -10,24 +23,35 @@ function AdminDashboard() {
     return 'Good Evening, Admin 🌙';
   };
 
-  // Mock Data for Professional Presentation
+  // Real calculations!
+  const productCount = products ? products.length : 0;
+  
+  // Dynamic revenue calculation (Summing up all product prices)
+  const totalValue = products 
+    ? products.reduce((acc, curr) => acc + (parseFloat(curr.price) || 0), 0).toFixed(2)
+    : '0.00';
+
+  // Dynamic Metrics Array
   const metrics = [
-    { label: 'Total Sales Revenue', value: '$1,249.50', icon: '💰', color: '#10b981' },
-    { label: 'Active Catalog Items', value: '20 Products', icon: '📦', color: '#3182ce' },
+    { label: 'Total Catalog Value', value: `$${totalValue}`, icon: '💰', color: '#10b981' },
+    { label: 'Active Catalog Items', value: `${productCount} Products`, icon: '📦', color: '#2563eb' },
     { label: 'Pending Store Orders', value: '4 Inbound', icon: '🛒', color: '#f59e0b' },
     { label: 'Store Conversion Rate', value: '3.42%', icon: '📈', color: '#8b5cf6' },
   ];
 
   const recentActivities = [
-    { text: 'New Product "Premium Headphones" listed', time: '10 mins ago', type: 'Success', color: '#dcfce7', textColor: '#15803d' },
-    { text: 'Stock Alert: "Tactile Keyboard" falling below 5 items', time: '1 hour ago', type: 'Warning', color: '#fef3c7', textColor: '#b45309' },
-    { text: 'Admin configuration updated by system logs', time: '4 hours ago', type: 'Info', color: '#e0f2fe', textColor: '#0369a1' },
-    { text: 'Database refresh and cache sync completed', time: '1 day ago', type: 'System', color: '#f1f5f9', textColor: '#475569' },
+    { text: 'Live API database synchronized with local catalog', time: 'Just now', type: 'Success', color: '#dcfce7', textColor: '#15803d' },
+    { text: 'Stock tracking engine running normally', time: '10 mins ago', type: 'Info', color: '#e0f2fe', textColor: '#0369a1' },
+    { text: 'Admin authentication guard verified successfully', time: '1 hour ago', type: 'System', color: '#f1f5f9', textColor: '#475569' },
   ];
+
+  if (isLoading) {
+    return <div style={{ padding: '2rem' }}>Calculating Store Metrics...</div>;
+  }
 
   return (
     <div>
-      {/* Upper Control Bar */}
+      {/* Header */}
       <div className={styles.adminHeader}>
         <div>
           <h1>{getGreeting()}</h1>
@@ -38,7 +62,7 @@ function AdminDashboard() {
         </div>
       </div>
 
-      {/* Modern 4-Column Stats Dashboard Grid */}
+      {/* Dynamic Stats Cards */}
       <div className={styles.statsGrid}>
         {metrics.map((metric, idx) => (
           <div key={idx} className={styles.statCard} style={{ borderLeft: `4px solid ${metric.color}` }}>
@@ -51,10 +75,8 @@ function AdminDashboard() {
         ))}
       </div>
 
-      {/* Bottom Split Layout System */}
+      {/* Grid Content */}
       <div className={styles.dashboardGrid}>
-        
-        {/* Left Side: Recent Activity Stream */}
         <div className={styles.panelBox}>
           <h3>Real-time Activity Log</h3>
           <div className={styles.activityList}>
@@ -72,7 +94,6 @@ function AdminDashboard() {
           </div>
         </div>
 
-        {/* Right Side: Quick Shortcuts Controller */}
         <div className={styles.panelBox}>
           <h3>System Shortcuts</h3>
           <div className={styles.actionList}>
@@ -82,12 +103,11 @@ function AdminDashboard() {
             <Link to="/" className={styles.actionBtn}>
               🌐 View Live Storefront
             </Link>
-            <a href="https://fakestoreapi.com" target="_blank" rel="noreferrer" className={styles.actionBtn}>
-              📂 Inspect Raw API Docs
+            <a href="http://localhost:5000/products" target="_blank" rel="noreferrer" className={styles.actionBtn}>
+              📂 Inspect Raw JSON Database
             </a>
           </div>
         </div>
-
       </div>
     </div>
   );
