@@ -1,0 +1,181 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Fjallraven - Foldsack No. 1 Backpack",
+      "price": 109.95,
+      "description": "Your everyday pack for items back and forth to work. Fits laptops up to 15 inches.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&q=80"
+    },
+    {
+      "id": "2",
+      "title": "Mens Casual Premium Slim Fit T-Shirts",
+      "price": 22.3,
+      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&q=80"
+    },
+    {
+      "id": "3",
+      "title": "Mens Cotton Jacket",
+      "price": 55.99,
+      "description": "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=500&q=80"
+    },
+    {
+      "id": "4",
+      "title": "Sony WH-1000XM4 Wireless Headphones",
+      "price": 298,
+      "description": "Industry leading noise canceling with Dual Noise Sensor technology.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+    },
+    {
+      "id": "5",
+      "title": "Apple Watch Series 9 Smartwatch",
+      "price": 399,
+      "description": "Powerful sensors, advanced health features, and bright always-on display.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
+    },
+    {
+      "id": "6",
+      "title": "Logitech MX Master 3S Wireless Mouse",
+      "price": 99.99,
+      "description": "An iconic tactile quiet click mouse with 8K DPI track-on-glass sensor.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80"
+    },
+    {
+      "id": "7",
+      "title": "Classic Leather Designer Wallet",
+      "price": 45,
+      "description": "Handcrafted genuine leather wallet with RFID blocking capability.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&q=80"
+    },
+    {
+      "id": "8",
+      "title": "Minimalist Ceramic Coffee Mug",
+      "price": 18.5,
+      "description": "Matte finish ergonomic ceramic mug designed for coffee enthusiasts.",
+      "category": "women's clothing",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&q=80"
+    },
+    {
+      "title": "Wireless Noise Cncelling Headphones",
+      "price": 299.99,
+      "category": "electronics",
+      "image": "https://m.media-amazon.com/images/I/61+gmfXI0uL._SL1500_.jpg",
+      "description": "Rose Gold Active Noise Cancelling Headphones with Microphone，INFURTURE Wireless Over Ear Bluetooth Headphones, Deep Bass, Memory Foam Ear Cups, Quick Charge 40H Playtime, for TV, Travel, Home Office",
+      "id": "L5JGVPc"
+    },
+    {
+      "title": "SWISS BEAUTY Liquid Lightweight Concealer ",
+      "price": 249,
+      "category": "women's clothing",
+      "image": "https://rukminim2.flixcart.com/image/1854/1854/xif0q/concealer/s/v/m/6-liquid-lightweight-concealer-full-coverage-easy-blend-classic-original-imahhh5m8guwtugw.jpeg?q=90",
+      "description": "SWISS BEAUTY Liquid Lightweight Concealer | Full Coverage | Easy Blend | Matte Finish Concealer (Classic Nude, 6 g)",
+      "id": "wHoatxF"
+    },
+
+    {
+      "id": "9",
+      "title": "Fjallraven Modern Explorer Backpack",
+      "price": 109.95,
+      "description": "Your everyday pack for work and outdoor trips. Fits laptops up to 15 inches with water-resistant fabric.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80"
+    },
+    {
+      "id": "10",
+      "title": "Minimalist Casual Premium Cotton Tee",
+      "price": 29.99,
+      "description": "Ultra-soft combed cotton, tailored slim fit, breathable for all-day daily comfort.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&q=80"
+    },
+    {
+      "id": "11",
+      "title": "Urban Weatherproof Technical Jacket",
+      "price": 89.99,
+      "description": "Lightweight insulated jacket designed for urban commuters and outdoor adventures.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1544441893-675973e31985?w=600&q=80"
+    },
+    {
+      "id": "12",
+      "title": "Sony WH-1000XM5 Studio Headphones",
+      "price": 348.00,
+      "description": "Industry-leading noise canceling with dual processors and 8 microphones for pristine audio.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"
+    },
+    {
+      "id": "13",
+      "title": "Apple Watch Ultra Titanium Edition",
+      "price": 799.00,
+      "description": "Precision GPS, bright sapphire display, and up to 36 hours of active battery life.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"
+    },
+    {
+      "id": "14",
+      "title": "Logitech MX Master 3S Ergonomic Mouse",
+      "price": 99.99,
+      "description": "Quiet Clicks technology with 8,000 DPI glass tracking for high-productivity workflows.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&q=80"
+    },
+    {
+      "id": "15",
+      "title": "Aesthetic Mechanical Wireless Keyboard",
+      "price": 129.50,
+      "description": "Custom tactile switches with RGB backlighting and multi-device Bluetooth pairing.",
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80"
+    },
+    {
+      "id": "16",
+      "title": "Handcrafted Italian Leather Bifold Wallet",
+      "price": 55.00,
+      "description": "Slim genuine leather construction featuring RFID-blocking security technology.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&q=80"
+    },
+    {
+      "id": "17",
+      "title": "Nordic Matte Ceramic Coffee Mug",
+      "price": 22.00,
+      "description": "Handmade ceramic mug with ergonomic heat insulation and smooth matte texture.",
+      "category": "women's clothing",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80"
+    },
+    {
+      "id": "18",
+      "title": "Polarized UV Protection Wayfarer Sunglasses",
+      "price": 145.00,
+      "description": "Classic acetate frame with anti-glare scratch-resistant polarized lenses.",
+      "category": "women's clothing",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80"
+    },
+    {
+      "id": "19",
+      "title": "Minimalist Gold Plated Pendant Necklace",
+      "price": 85.00,
+      "description": "18k gold vermeil finish over solid sterling silver. Hypoallergenic daily wear.",
+      "category": "jewelery",
+      "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80"
+    },
+    {
+      "id": "20",
+      "title": "Premium Leather Everyday Sneakers",
+      "price": 110.00,
+      "description": "Sleek low-top sneakers crafted with memory foam insoles for non-stop comfort.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80"
+    }
+  ]
+}
