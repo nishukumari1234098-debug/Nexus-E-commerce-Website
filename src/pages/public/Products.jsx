@@ -6,7 +6,7 @@ import useDebounce from '../../hooks/useDebounce';
 import styles from './Pages.module.css';
 
 const fetchProducts = async () => {
-  const res = await fetch('http://localhost:5000/products');
+  const res = await fetch('https://6a62f6b41bffb2ffab8b90ab.mockapi.io/products');
   if (!res.ok) throw new Error('Failed to load products');
   return res.json();
 };
