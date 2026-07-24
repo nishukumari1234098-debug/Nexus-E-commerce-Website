@@ -1,0 +1,167 @@
+.adminHeader {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.adminHeader h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+}
+
+.adminHeader p {
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.timeBadge {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Metric Cards Layout */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.statIcon {
+  font-size: 2rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 12px;
+}
+
+/* Bottom Split Layout: Recent Activities & Quick Actions */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panelBox {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.panelBox h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.75rem;
+}
+
+/* Activity List Rules */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activityItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  border-left: 4px solid #cbd5e1;
+}
+
+.activityMeta h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.activityMeta p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+/* Quick Actions List */
+.actionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.actionBtn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 0.85rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.actionBtn:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+}

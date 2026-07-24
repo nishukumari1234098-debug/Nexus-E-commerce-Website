@@ -1,34 +1,31 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState } from 'react';
 
-export const AuthContext = createContext()
+export const AuthContext = createContext();
 
-function AuthProvider({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+export function AuthProvider({ children }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  const login = (username, password) => {
+    // String matching with trim & lowercase (space issues handle karne ke liye)
+    const cleanUser = username ? username.trim().toLowerCase() : '';
+    const cleanPass = password ? password.trim() : '';
 
-  useEffect(() => {
-    const storedAuth = localStorage.getItem('isAuthenticated')
-    if (storedAuth === 'true') {
-      setIsAuthenticated(true)
+    if (cleanUser === 'admin' && cleanPass === 'admin123') {
+      setIsAuthenticated(true);
+      return true; // Success!
     }
-  }, [])
-
-  const login = () => {
-    localStorage.setItem('isAuthenticated', 'true')
-    setIsAuthenticated(true)
-  }
-
+    
+    setIsAuthenticated(false);
+    return false; // Invalid
+  };
 
   const logout = () => {
-    localStorage.removeItem('isAuthenticated')
-    setIsAuthenticated(false)
-  }
+    setIsAuthenticated(false);
+  };
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
-  )
+  );
 }
-
-export default AuthProvider

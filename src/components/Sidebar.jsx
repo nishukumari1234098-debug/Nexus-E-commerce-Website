@@ -1,25 +1,29 @@
-import { Link, useNavigate } from 'react-router-dom'
-import useAuth from '../hooks/useAuth'
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
+import styles from './Sidebar.module.css';
 
 function Sidebar() {
-  const { logout } = useAuth()
-  const navigate = useNavigate()
+  const { logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout()
-    navigate('/login')
-  }
+    logout();
+    navigate('/login');
+  };
 
   return (
-    <aside style={{ width: '200px', background: '#333', color: 'white', padding: '1rem', minHeight: '100vh' }}>
-      <h3>Admin Panel</h3>
-      <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-        <Link to="/admin" style={{ color: 'white' }}>Dashboard</Link>
-        <Link to="/admin/products" style={{ color: 'white' }}>Manage Products</Link>
-        <button onClick={handleLogout}>Log Out</button>
-      </nav>
+    <aside className={styles.sidebar}>
+      <div>
+        <h3 className={styles.title}>🛠️ Nexus Admin</h3>
+        <nav className={styles.navContainer}>
+          <Link to="/admin" className={styles.sideLink}>Dashboard</Link>
+          <Link to="/admin/products" className={styles.sideLink}>Manage Products</Link>
+          <Link to="/" className={styles.sideLink}>View Storefront</Link>
+        </nav>
+      </div>
+      <button onClick={handleLogout} className={styles.logoutBtn}>Log Out</button>
     </aside>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
